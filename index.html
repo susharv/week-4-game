@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crystals Collector</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<!-- Container Body -->
+<div class="col-12 container">
+
+<!-- Header -->
+<div class="row">
+<div class="col-4 header">
+	<h1> Crystals Collector!</h1>
+</div>
+</div>
+
+<!-- Main -->
+<div class="row">
+<div class="col-5 main">
+	<p><b>
+	You will be given a random number at the start of the game. <br><br>
+	There are four crystals below. By clicking on a crystal you will add a specific amount of points to you total score. <br><br>
+	You will win the game by matching your total score to random number, you lose the game if your total score goes above the random number. <br><br>
+	The value of each crystal is hidden from you until you click on it. <br><br>
+	Each time when the game starts, the game will change the values of each crystal.
+	</b></p>
+</div>
+</div>
+
+<!-- Script Tags for JavaScript and jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+<!-- Random Number By Computer -->
+<div class="row">
+<div class = "col-2 initialTtl">
+<p id="randNumTtl"></p>
+<input type="button" value="Click for Your Lucky Number" onclick="crystalCompareTtl();">
+</div>
+
+<!-- Track of Number of Wins and Loses -->
+<div class="col-1 winsLoses">
+<p id="wins"><b>Wins: </b></p><br>
+<p id="loses"><b>Loses: </b></p>
+</div>
+</div>
+
+<!-- Display of the 4 Crystals -->
+<div class="row">
+<div class="col-6 crystals">
+	<img src="assets/images/crystal-1.jpg" alt="crystal-1" width="75" id="crystal1" onclick="print_sum(this.id);">
+	<img src="assets/images/crystal-2.jpg" alt="crystal-2" width="75" id="crystal2" onclick="print_sum(this.id);">
+	<img src="assets/images/crystal-3.jpg" alt="crystal-3" width="75" id="crystal3" onclick="print_sum(this.id);">
+	<img src="assets/images/crystal-4.jpg" alt="crystal-4" width="75" id="crystal4" onclick="print_sum(this.id);">
+</div>
+</div>
+
+<!-- User Score Text -->
+<div class="row">
+<div class="col-2 userScoreText">
+<p>Your total score is: </p>
+</div>
+</div>
+
+<!-- Track of User Score -->
+<div class="row">
+<div class="col-2 userScoreCalc">
+<p id="userTtl">Score</p>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
